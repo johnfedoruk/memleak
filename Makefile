@@ -1,15 +1,15 @@
 CC=g++
-CFLAGS=-Wall -std=c++11 -pthread -O3
-OBJECTS=main.o
+CFLAGS=-Wall -std=c++11 -O0
+OBJECTS=main.o lib/wasteful.o
 TARGET=run
 
 all: $(TARGET)
 
 $(TARGET): $(OBJECTS)
-	$(CC) $(CFLAGS) $(OBJECTS) -o $(TARGET)
+	$(CC) $(OBJECTS) $(CFLAGS) -o $(TARGET)
 
 %.o: %.cpp
-	$(CC) $(CFLAGS) -c $<
+	$(CC) $< $(CFLAGS) -c -o $@
 
 clean:
-	rm -rf $(TARGET) *.o
+	rm -rf $(TARGET) $(OBJECTS)
