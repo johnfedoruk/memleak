@@ -31,5 +31,5 @@ uint8_t Wasteful::randomByte() {
 }
 
 Wasteful::~Wasteful() {
-    std::cout << "Deleting Wasteful instance" << std::endl;
+    std::cout << "Deleting Wasteful instance. There should be a big memory leak right now." << std::endl;
 }

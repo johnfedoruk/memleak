@@ -17,6 +17,7 @@ int main(int argc, char* argv[]) {
     }
     Wasteful* waste = new Wasteful(size_int);
     waste->makeWaste();
+    delete waste;
     pause();
     return 0;
 }
