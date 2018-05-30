@@ -23,17 +23,6 @@ int Wasteful::makeWaste() {
         }
         std::cout << "Generated " << i+1 << "GB of data" << std::endl;
     }
-
-    // unsigned int tmp=0;
-
-    // for(i=0;i<this->wastefulness;i++) {
-    //     for(j=0;j<GIGA;j+=1000) {
-    //         if(wasted_space[i][j]==0) {
-    //             tmp++;
-    //         }
-    //     }
-    // }
-    std::cout << "Done generating" << std::endl;
     return 0;
 }
 
